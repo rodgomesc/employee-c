@@ -15,6 +15,7 @@ void print_usage(char *argv[])
 
 int main(int argc, char *argv[])
 {
+  int dbfd = -1;
   char *filepath = NULL;
   int c;
   bool newfile = false;
@@ -45,6 +46,11 @@ int main(int argc, char *argv[])
     printf("File path is required argument\n");
     print_usage(argv);
     return 0;
+  }
+
+  if (newfile)
+  {
+    dbfd = create_db_file(filepath);
   }
 
   printf("New file: %d\n", newfile);

@@ -3,6 +3,7 @@
     "stdio.h": "c",
     "common.h": "c",
     "file.h": "c",
-    "parse.h": "c"
+    "parse.h": "c",
+    "stdbool.h": "c"
   }
 }
